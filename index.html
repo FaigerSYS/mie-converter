@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MapImageEngine: Converter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" charset="UTF-8">
+
+        <script type="text/javascript" src="js/deflate.js"></script>
+        <script type="text/javascript" src="js/filesaver.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700&amp;display=swap" rel="stylesheet">
+        <link type="text/css" href="css/index.css" rel="stylesheet">
+    </head>
+
+    <body class="disable-select" link="#eeeeee" vlink="#eeeeee" alink="#bdbdbd">
+        <h1>MapImageEngine: Converter</h1>
+        <hr align="center" width="100%" size="2" color="#9e9e9e" />
+
+        <div id="upload" style="display: none">
+        	<br><br>
+            <form enctype="multipart/form-data">
+                Width (in blocks):&nbsp;
+                <input id="upload.width" class="number-input" type="text" value="1" autocomplete="off" />
+                <br><br>
+
+                Height (in blocks):&nbsp;
+                <input id="upload.height" class="number-input" type="text" value="1" autocomplete="off" />
+                <br><br>
+
+                <label class="file-upload-label">
+                    <input type="file" name="image_upload" id="upload.image" onChange="processFile(this)" />
+                    Choose image
+                </label>
+            </form>
+        </div>
+        <br>
+
+        <div id="progress" style="display: none">
+            Converting...
+        </div>
+
+        <div id="success" class="success" style="display: none">
+            Image successfully converted! Download will start now
+        </div>
+
+        <div id="error" class="error">
+            <noscript>
+                JavaScript is disabled in your browser! Please enable it
+            </noscript>
+        </div>
+
+        <br>
+        <hr align="center" width="100%" size="2" color="#9e9e9e" />
+        <br>
+
+        <div id="credits">
+            Plugin creator:
+            <a target="_blank" href="https://github.com/FaigerSYS">FaigerSYS</a>
+        </div>
+    </body>
+</html>
